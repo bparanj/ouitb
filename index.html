@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BootBounce Exit Intent Modal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Reference CDN Files For Less Server Load -->
+    <!-- Twitter Bootstrap (use most recent version) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+
+    <!-- BootBounce CSS -->
+    <link href="assets/css/bootbounce.css" rel="stylesheet">
+
+    <!-- Moderizer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->   
+
+    <!-- Custom Styles --> 
+    <style>
+        body {
+          padding-top: 70px;
+          padding-bottom: 70px;
+        }
+        .btn {
+            white-space: normal;
+        }
+        .btn-hg {
+          padding: 45px 20px;
+          font-size: 24px;
+          line-height: 1.227;
+          border-radius: 6px;
+        }
+        .mts {
+            margin-top:5px;
+        }          
+    </style>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">BootBounce</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="choice.html">Two Choices Demo</a></li>
+            <li><a href="form.html">Form Demo</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><button type="button" class="btn btn-success navbar-btn" data-toggle="modal" data-target="#exitForm">Get BootBounce!</button></li>
+          </ul>   
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">BootBounce - Exit Intent Modal Built W/ Twitter Bootstrap</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <p class="lead text-center">Quickly use this on any HTML page to capture your webpage visitors' attention while they are trying to leave your site.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h2><small>Features:</small></h2>
+                <hr/>
+                <ul class="list-group">
+                    <li class="list-group-item">Fires when user leaves page (sensitivity setting)</li>
+                    <li class="list-group-item">Built with Twitter Bootstrap (easily customizable)</li>
+                    <li class="list-group-item">Includes popular exit script <a href="https://github.com/carlsednaoui/ouibounce" target="_blank">Ouibounce</a> (lots of options)</li>
+                    <li class="list-group-item">Modal centered vertically and horizontally (easy to view)</li>
+                    <li class="list-group-item">Huge 'postive' and 'negative' calls-to-action (high conversions)</li>
+                    <li class="list-group-item">Custom 'close' button (looks great!)</li>
+                    <li class="list-group-item">Includes two unique versions (large 'two choices' buttons and 'form')</li>
+                    <li class="list-group-item">Fully customizable (knock yourself out!)</li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <h2><small>About:</small></h2>
+                <hr/>
+                <p>Following the success of <a href="http://www.bounceexchange.com/" target="_blank">Bounce Exchange</a>, and after having to recreate exit intent popovers for many of my own websites, I decided that it was time for everyone to have an easy way to implement this high-converting marketing snippet.</p>
+                <p><strong>Don't worry, it's free!</strong>  All you have to do is click the download button below, enter your name and email address (so I can follow up with you and give you even more marketing code snippets! &#9786; ) and it's yours...</p>
+                <div class="well well-small">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2 style="margin-top: 5px;"><small>Free Download:</small></h2>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-center">
+                                <a href="#" data-toggle="modal" data-target="#exitForm" class="btn btn-lg btn-success">Get It Now!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">BootBounce</a>
+        </div>
+        <p class="navbar-text navbar-right">A FREE marketing snippet brought to you by <a href="#" class="navbar-link">IgnitionHub &copy;</a></p>
+      </div>
+    </nav>
+
+    <!-- Form Modal (called via data-target - may also call via javascript as an exit intent modal -->
+    <div class="modal fade" id="exitForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="closeicon" data-dismiss="modal" aria-hidden="true">            
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                    One More Step...
+                                </div>
+                            </div>
+                            <h1 class="text-center">
+                                <b>Free Download: BootBounce!</b>
+                            </h1>
+                            <hr/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="text-center">
+                                <img class="img-responsive" src="assets/img/gears.gif" style="margin:0 auto;" />
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <p class="lead">
+                                AWESOME!  We know you'll really benefit from this set of free files.  Never pay for 'exit intent' again! Just enter your name and email to get these files:
+                            </p>
+                            <form class="" action="http://ignitionhub.activehosted.com/proc.php" method="post" id="_form_1157" accept-charset="utf-8" enctype="multipart/form-data">
+                                <input type="hidden" name="f" value="1157">
+                                <input type="hidden" name="s" value="">
+                                <input type="hidden" name="c" value="0">
+                                <input type="hidden" name="m" value="0">
+                                <input type="hidden" name="act" value="sub">
+                                <input type="hidden" name="nlbox[]" value="9">
+                                <div class="form-group form-group-lg">
+                                    <input type="text" class="form-control" name="fullname" placeholder="Name">
+                                </div>
+                                <div class="form-group form-group-lg">
+                                    <input type="email" class="form-control" name="email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-block btn-success btn-lg">Get BootBounce For Free!&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></button>
+                                    <p class="text-muted text-center"><small><i class="fa fa-lock"></i>&nbsp;&nbsp;We promise never to sell or rent your email address</small></p>
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- BootBounce Modal (called via javascript - may also call as a data-target in body as normal -->
+    <div class="modal fade" id="exitChoice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="closeicon" data-dismiss="modal" aria-hidden="true">            
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                    One More Thing...
+                                </div>
+                            </div>
+                            <h1 class="text-center">
+                                <b>Wait! Before You Go...</b>
+                            </h1>
+                            <h2 class="text-center">
+                                Download BootBounce Absolutely FREE!
+                            </h2>
+                            <hr/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="text-center">
+                                <img class="img-responsive" src="assets/img/gears.gif" style="margin:0 auto;" />
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <p class="lead">
+                                This set of files will help you keep your website visitors engaged, get more leads and build your email list. Just download and start using:
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr/>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <button class="btn btn-danger btn-hg btn-block mts" data-dismiss="modal">
+                                      No, I don't want to be a website conversion master.
+                                    </button>                  
+                                </div>
+                                <div class="col-sm-6">
+                                    <button id="showForm" class="btn btn-success btn-hg btn-block mts">
+                                      <span class="fa fa-download"></span>&nbsp;&nbsp;YES, PLEASE SEND THE FILES TO ME NOW!
+                                    </a>                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Reference Google's Jquery For Less Server Load -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>')</script>
+
+    <!-- Reference CDN Bootstrap Javascript For Less Server Load -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- Custom Javascript File -->
+    <script src="assets/js/ouibounce.min.js"></script>
+
+    <script>
+        // Fires modal when user exits
+        var _ouibounce = ouibounce(false, {
+            aggressive: true,
+            timer: 0,
+            callback: function() {
+                $('#exitChoice').modal('show');
+            }
+        });
+
+        // Centers modal on fire and resize
+        $(function() {
+            function reposition() {
+                var modal = $(this),
+                dialog = modal.find('.modal-dialog');
+                modal.css('display', 'block');
+                
+                // Dividing by two centers the modal exactly, but dividing by three 
+                // or four works better for larger screens.
+                dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
+            }
+            // Reposition when a modal is shown
+            $('.modal').on('show.bs.modal', reposition);
+            // Reposition when the window is resized
+            $(window).on('resize', function() {
+                $('.modal:visible').each(reposition);
+            });
+        });
+
+        function showFormModal() {
+            $("#exitChoice").removeClass("fade").modal("hide");
+            $("#exitForm").addClass("fade").modal("show");
+        }
+
+        $("#showForm").on("click", function() {
+            showFormModal();
+        });
+
+    </script>
+
+    </body>
+</html>

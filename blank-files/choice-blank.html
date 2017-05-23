@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BootBounce Exit Intent Modal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Reference CDN Files For Less Server Load -->
+    <!-- Twitter Bootstrap (use most recent version) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+
+    <!-- BootBounce CSS -->
+    <link href="assets/css/bootbounce.css" rel="stylesheet">
+
+    <!-- Moderizer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->   
+
+    <!-- Custom Styles --> 
+    <style>
+        /* style to allow room for navigation */
+        body {
+            margin-top:70px;
+        }
+        /* style to allow multi-lines in huge buttons */
+        .btn {
+            white-space: normal;
+        }
+        /* style to include horizontal space between buttons on mobile devices */
+        .mts {
+            margin-top:5px;
+        }          
+    </style>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="text-center">
+                    <a href="#" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#exitChoice"><i class="fa fa-magic"></i>&nbsp;&nbsp;Click This Button Or Leave Page To Fire Modal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BootBounce Modal (called via javascript - may also call as a data-target in body as normal -->
+    <div class="modal fade" id="exitChoice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="closeicon" data-dismiss="modal" aria-hidden="true">            
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                    One More Thing...
+                                </div>
+                            </div>
+                            <h1 class="text-center">
+                                <b>Wait! Before You Go...</b>
+                            </h1>
+                            <h2 class="text-center">
+                                Download BootBounce Absolutely FREE!
+                            </h2>
+                            <hr/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="text-center">
+                                <img class="img-responsive" src="assets/img/gears.gif" style="margin:0 auto;" />
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <p class="lead">
+                                This set of files will help you keep your website visitors engaged, get more leads and build your email list. Just download and start using:
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr/>
+                            <div class="row">
+                                <div class="col-sm-6 mts">
+                                    <button class="btn btn-danger btn-hg btn-block mts" data-dismiss="modal">
+                                      No, I don't want to be a website conversion master.
+                                    </button>                  
+                                </div>
+                                <div class="col-sm-6 mts">
+                                    <button id="showForm" class="btn btn-success btn-hg btn-block mts">
+                                      <span class="fa fa-download"></span>&nbsp;&nbsp;YES, PLEASE SEND THE FILES TO ME NOW!
+                                    </a>                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Reference Google's Jquery For Less Server Load -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>')</script>
+
+    <!-- Reference CDN Bootstrap Javascript For Less Server Load -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- Custom Javascript File -->
+    <script src="assets/js/ouibounce.min.js"></script>
+
+    <script>
+        // Fires modal when user exits
+        var _ouibounce = ouibounce(false, {
+            aggressive: true,
+            timer: 0,
+            callback: function() {
+                $('#exitChoice').modal('show');
+            }
+        });
+
+        // Centers modal on fire and resize
+        $(function() {
+            function reposition() {
+                var modal = $(this),
+                dialog = modal.find('.modal-dialog');
+                modal.css('display', 'block');
+                
+                // Dividing by two centers the modal exactly, but dividing by three 
+                // or four works better for larger screens.
+                dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
+            }
+            // Reposition when a modal is shown
+            $('.modal').on('show.bs.modal', reposition);
+            // Reposition when the window is resized
+            $(window).on('resize', function() {
+                $('.modal:visible').each(reposition);
+            });
+        });
+
+    </script>
+
+    </body>
+</html>
